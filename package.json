@@ -101,7 +101,7 @@
       "cspell",
       "prettier --write --ignore-unknown"
     ],
-    "*.{js,cjs,jsx}": [
+    "*.{ts,tsx,js}": [
       "eslint --max-warnings 0",
       "vitest related --run"
     ],

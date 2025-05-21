@@ -1,0 +1,112 @@
+{
+  "name": "react-vite-template",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint",
+    "test": "vitest run",
+    "preview": "vite preview",
+    "prepare": "husky"
+  },
+  "engines": {
+    "node": ">=21.2.0"
+  },
+  "dependencies": {
+    "prop-types": "^15.8.1",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@awmottaz/prettier-plugin-void-html": "^1.8.0",
+    "@pixie-cheeks/eslint-config": "^13.0.0",
+    "@pixie-cheeks/stylelint-config": "^4.0.0",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/user-event": "^14.6.1",
+    "@types/node": "^22.15.21",
+    "@types/react": "^19.1.5",
+    "@types/react-dom": "^19.1.5",
+    "@vitejs/plugin-react": "^4.4.1",
+    "@vitest/eslint-plugin": "^1.2.0",
+    "cspell": "^9.0.2",
+    "eslint": "9.27.0",
+    "eslint-plugin-jest-dom": "^5.5.0",
+    "eslint-plugin-react-refresh": "^0.4.20",
+    "eslint-plugin-testing-library": "^7.2.1",
+    "husky": "^9.1.7",
+    "jsdom": "^26.1.0",
+    "lint-staged": "^16.0.0",
+    "postcss-preset-env": "^10.1.6",
+    "prettier": "^3.5.3",
+    "stylelint": "^16.19.1",
+    "typescript": "~5.8.3",
+    "typescript-eslint": "^8.32.1",
+    "vite": "^6.3.5",
+    "vitest": "^3.1.4"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "plugins": [
+      "@awmottaz/prettier-plugin-void-html"
+    ]
+  },
+  "cspell": {
+    "version": "0.2",
+    "language": "en,en-GB,lorem",
+    "allowCompoundWords": true,
+    "dictionaries": [
+      "html"
+    ],
+    "words": [
+      "awmottaz",
+      "esbuild",
+      "unrs"
+    ],
+    "ignorePaths": [
+      "dist",
+      "node_modules",
+      "pnpm-lock.yaml"
+    ]
+  },
+  "stylelint": {
+    "extends": [
+      "@pixie-cheeks/stylelint-config",
+      "@pixie-cheeks/stylelint-config/bem"
+    ],
+    "ignoreFiles": [
+      "**/*",
+      "!src/**/*.css"
+    ],
+    "overrides": [
+      {
+        "files": [
+          "**/*.module.css"
+        ],
+        "extends": [
+          "@pixie-cheeks/stylelint-config/css-modules"
+        ]
+      }
+    ]
+  },
+  "postcss": {
+    "plugins": {
+      "postcss-preset-env": {}
+    }
+  },
+  "lint-staged": {
+    "*": [
+      "cspell",
+      "prettier --write --ignore-unknown"
+    ],
+    "*.{js,cjs,jsx}": [
+      "eslint --max-warnings 0",
+      "vitest related --run"
+    ],
+    "*.css": [
+      "stylelint"
+    ]
+  }
+}

@@ -1,8 +1,10 @@
-function RenderName({ name = 'Zach' }) {
+import type { JSX } from 'react';
+
+function RenderName({ name = 'Zach' }): JSX.Element {
   return <div>{name}</div>;
 }
 
-function App() {
+function App(): JSX.Element {
   return (
     <>
       <p>Hello World!</p>

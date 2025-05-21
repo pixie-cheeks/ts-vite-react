@@ -41,8 +41,6 @@ export default tseslint.config(
       'n/no-unsupported-features/node-builtins': 'off',
     },
   },
-  tseslint.configs.strictTypeChecked,
-  tseslint.configs.stylisticTypeChecked,
   {
     files: ['**/*.{ts,tsx}'],
     extends: [
@@ -57,11 +55,8 @@ export default tseslint.config(
     },
     rules: {
       '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
+      '@typescript-eslint/explicit-function-return-type': 'error',
     },
-  },
-  {
-    files: ['**/*.{js,jsx,cjs,mjs}'],
-    extends: [tseslint.configs.disableTypeChecked],
   },
   {
     files: ['**/*.test.*'],

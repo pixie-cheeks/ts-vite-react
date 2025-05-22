@@ -33,9 +33,6 @@ importers:
       '@testing-library/user-event':
         specifier: ^14.6.1
         version: 14.6.1(@testing-library/dom@10.4.0)
-      '@types/node':
-        specifier: ^22.15.21
-        version: 22.15.21
       '@types/react':
         specifier: ^19.1.5
         version: 19.1.5
@@ -4546,6 +4543,7 @@ snapshots:
   '@types/node@22.15.21':
     dependencies:
       undici-types: 6.21.0
+    optional: true
 
   '@types/react-dom@19.1.5(@types/react@19.1.5)':
     dependencies:
@@ -7104,7 +7102,8 @@ snapshots:
       has-symbols: 1.1.0
       which-boxed-primitive: 1.1.1
 
-  undici-types@6.21.0: {}
+  undici-types@6.21.0:
+    optional: true
 
   unrs-resolver@1.7.2:
     dependencies:
